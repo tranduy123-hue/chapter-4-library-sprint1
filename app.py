@@ -80,7 +80,7 @@ def create_server(database='library.sqlite3', host='127.0.0.1', port=8765):
             except (ValueError, UnicodeDecodeError):
                 self.respond('Không đọc được biểu mẫu.', 400)
                 return
-            if not hmac.compare_digest(fields.get('token', ''), token):
+            if not hmac.compare_digest(fields.get('token', '').encode('utf-8'), token.encode('ascii')):
                 self.respond('Phiên biểu mẫu đã hết hạn. Tải lại trang để tiếp tục.', 403)
                 return
             if urlsplit(self.path).path == '/fines':
