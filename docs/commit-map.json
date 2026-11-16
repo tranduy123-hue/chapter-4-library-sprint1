@@ -1,0 +1,41 @@
+{
+  "old_refs": {
+    "refs/heads/docs/team-review-handoff": "969f3edad727b6cc437e20a3fdc63d249822e590",
+    "refs/heads/feature/add-book-service": "37e2ec6a5d02632ffead4ea2722d0cfae22247f3",
+    "refs/heads/feature/add-book-ui": "e90730dad87822666200b1a7b0a80864217a3deb",
+    "refs/heads/main": "44d01e403b96afe54c2e99aed12b70b8ce1f007f"
+  },
+  "new_refs": {
+    "refs/heads/docs/team-review-handoff": "e0bc2ac4ee3e15232124bf4a36f30f04d56133d8",
+    "refs/heads/feature/add-book-service": "735153d2cd0586eef61043833bade021d76e2d14",
+    "refs/heads/feature/add-book-ui": "36a00cc57da8f8bff546eb2383372ad7b09e8ca7",
+    "refs/heads/main": "04c94881c52f4bc1a67f1331994f53e1f300e5bd"
+  },
+  "commit_map": {
+    "656b91b8b533f45bac08be2d9c728add031dbecc": "58959f46d045999323276153b82fa441ce8b041f",
+    "fbf5062e60cee6a12918f520b9f8f0a847d7ae1f": "299dd22c9ab55f81c28b04e05ea88125bf0b596a",
+    "9d1ee1a209efec499f6a4251850a749f367df41f": "223b9f93ee1e25bbd1f4f1ab608f1a45b5ff7211",
+    "5fb6eeab117f76a9dcdda7c28a7a47a213d60f9a": "4c4389f7cd60c2305aef28f11d41d2b2a02bf4c0",
+    "15f449146f16d1d389ee1cc62f963cc3e7609469": "4f32afb1cd130a58ef6ef0b3175b1481dbe421e5",
+    "f8b0e3f4ca04a35600a88a73d3f43a957bc707a0": "387e50594fe4463bfd9beaaf1ec50ad280116c72",
+    "37e2ec6a5d02632ffead4ea2722d0cfae22247f3": "735153d2cd0586eef61043833bade021d76e2d14",
+    "06e768e39d27f0c879c8f63c0d4657ac202128dc": "aca5c6da221efed466c57875dd83880d5c36a217",
+    "47657bc97c21a8b40cdc8fe0f60b95e1448955ce": "27832d6d4cff9031c39bb3dab5d166de9f12fccc",
+    "e90730dad87822666200b1a7b0a80864217a3deb": "36a00cc57da8f8bff546eb2383372ad7b09e8ca7",
+    "44d01e403b96afe54c2e99aed12b70b8ce1f007f": "04c94881c52f4bc1a67f1331994f53e1f300e5bd",
+    "f85f4e289c7db12626dce8812b1fd2110ce6e3fa": "75e6532a6cefe4f539ab53bd80a2334467588892",
+    "f645413e7b126552695e76dee97fe9cc25a54902": "d2007575a573f7e7d9042a471fbd7a8a5a7381f1",
+    "969f3edad727b6cc437e20a3fdc63d249822e590": "e0bc2ac4ee3e15232124bf4a36f30f04d56133d8"
+  },
+  "identity_corrected_commits": [
+    "656b91b8b533f45bac08be2d9c728add031dbecc",
+    "fbf5062e60cee6a12918f520b9f8f0a847d7ae1f",
+    "9d1ee1a209efec499f6a4251850a749f367df41f",
+    "5fb6eeab117f76a9dcdda7c28a7a47a213d60f9a",
+    "15f449146f16d1d389ee1cc62f963cc3e7609469",
+    "47657bc97c21a8b40cdc8fe0f60b95e1448955ce",
+    "e90730dad87822666200b1a7b0a80864217a3deb",
+    "f85f4e289c7db12626dce8812b1fd2110ce6e3fa"
+  ],
+  "verification": "All commit trees and messages unchanged; graph parent order preserved. Old signatures removed because rewritten commits cannot retain valid signatures."
+}
