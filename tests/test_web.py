@@ -63,6 +63,9 @@ class WebTests(unittest.TestCase):
         # Assert
         self.assertEqual(status, 422)
         self.assertIn('value="Clean Code"', html)
+        self.assertIn('value="Robert C. Martin"', html)
+        self.assertIn('value="978-0-13-235088-4"', html)
+        self.assertIn('1 sách đã lưu', html)
         self.assertIn('role="alert"', html)
 
     def test_empty_title_is_rejected_by_server(self):
@@ -99,6 +102,16 @@ class WebTests(unittest.TestCase):
         status, _, _ = self.request('POST', '/books', fields)
         # Assert
         self.assertEqual(status, 403)
+
+    def test_non_ascii_csrf_token_returns_403_and_server_remains_usable(self):
+        # Arrange
+        fields = self.book_fields(token='é')
+        # Act
+        status, _, _ = self.request('POST', '/books', fields)
+        get_status, _, _ = self.request('GET', '/')
+        # Assert
+        self.assertEqual(status, 403)
+        self.assertEqual(get_status, 200)
 
     def test_static_routes_do_not_expose_source(self):
         # Arrange
