@@ -1,0 +1,62 @@
+testHeavyFine (tests.test_fines.RoleCFineTests.testHeavyFine) ... ok
+testNoFine (tests.test_fines.RoleCFineTests.testNoFine) ... ok
+testNormalFine (tests.test_fines.RoleCFineTests.testNormalFine) ... ok
+test_large_fine_stays_exact (tests.test_fines.RoleCFineTests.test_large_fine_stays_exact) ... ok
+test_negative_boundary_has_no_fine (tests.test_fines.RoleCFineTests.test_negative_boundary_has_no_fine) ... ok
+test_non_integer_days_are_rejected (tests.test_fines.RoleCFineTests.test_non_integer_days_are_rejected) ... ok
+test_ten_day_boundary_has_no_surcharge (tests.test_fines.RoleCFineTests.test_ten_day_boundary_has_no_surcharge) ... ok
+test_concurrent_duplicate_add_is_atomic (tests.test_repository.RoleADatabaseTests.test_concurrent_duplicate_add_is_atomic) ... ok
+test_failed_insert_rolls_back_and_connection_remains_usable (tests.test_repository.RoleADatabaseTests.test_failed_insert_rolls_back_and_connection_remains_usable) ... ok
+test_invalid_isbn_is_rejected_without_writing (tests.test_repository.RoleADatabaseTests.test_invalid_isbn_is_rejected_without_writing) ... ok
+test_normalized_lookup_and_unique_insert (tests.test_repository.RoleADatabaseTests.test_normalized_lookup_and_unique_insert) ... ok
+test_persistence_after_reopen (tests.test_repository.RoleADatabaseTests.test_persistence_after_reopen) ... ok
+test_sql_injection_title_is_stored_as_data (tests.test_repository.RoleADatabaseTests.test_sql_injection_title_is_stored_as_data) ... ok
+test_unique_constraint_is_present_in_database (tests.test_repository.RoleADatabaseTests.test_unique_constraint_is_present_in_database) ... ok
+test_add_trims_fields_and_lists_book (tests.test_services.RoleBServiceTests.test_add_trims_fields_and_lists_book) ... ok
+test_duplicate_isbn_including_normalization (tests.test_services.RoleBServiceTests.test_duplicate_isbn_including_normalization) ... ok
+test_exception_exports_are_the_same_value_errors (tests.test_services.RoleBServiceTests.test_exception_exports_are_the_same_value_errors) ... ok
+test_isbn10_with_lowercase_x_is_supported_and_unique (tests.test_services.RoleBServiceTests.test_isbn10_with_lowercase_x_is_supported_and_unique) ... ok
+test_list_books_delegates_to_repository (tests.test_services.RoleBServiceTests.test_list_books_delegates_to_repository) ... ok
+test_bad_isbn_shapes_and_checksums_are_rejected (tests.test_services.RoleCFormValidationTests.test_bad_isbn_shapes_and_checksums_are_rejected) ... ok
+test_blank_and_non_string_fields_are_rejected (tests.test_services.RoleCFormValidationTests.test_blank_and_non_string_fields_are_rejected) ... ok
+test_invalid_input_never_calls_repository (tests.test_services.RoleCFormValidationTests.test_invalid_input_never_calls_repository) ... ok
+test_maximum_lengths_are_accepted (tests.test_services.RoleCFormValidationTests.test_maximum_lengths_are_accepted) ... ok
+test_overlong_fields_are_rejected (tests.test_services.RoleCFormValidationTests.test_overlong_fields_are_rejected) ... ok
+test_add_book_redirects_and_persists_escaped_html (tests.test_web.WebTests.test_add_book_redirects_and_persists_escaped_html) ... 127.0.0.1 - - [16/Nov/2026 18:52:50] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [16/Nov/2026 18:52:50] "POST /books HTTP/1.1" 303 -
+127.0.0.1 - - [16/Nov/2026 18:52:50] "GET / HTTP/1.1" 200 -
+ok
+test_duplicate_isbn_preserves_form_values (tests.test_web.WebTests.test_duplicate_isbn_preserves_form_values) ... 127.0.0.1 - - [16/Nov/2026 18:52:50] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [16/Nov/2026 18:52:50] "POST /books HTTP/1.1" 303 -
+127.0.0.1 - - [16/Nov/2026 18:52:50] "POST /books HTTP/1.1" 422 -
+ok
+test_empty_title_is_rejected_by_server (tests.test_web.WebTests.test_empty_title_is_rejected_by_server) ... 127.0.0.1 - - [16/Nov/2026 18:52:50] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [16/Nov/2026 18:52:50] "POST /books HTTP/1.1" 422 -
+ok
+test_fine_form_required_cases (tests.test_web.WebTests.test_fine_form_required_cases) ... 127.0.0.1 - - [16/Nov/2026 18:52:50] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [16/Nov/2026 18:52:50] "POST /fines HTTP/1.1" 200 -
+127.0.0.1 - - [16/Nov/2026 18:52:50] "POST /fines HTTP/1.1" 200 -
+127.0.0.1 - - [16/Nov/2026 18:52:50] "POST /fines HTTP/1.1" 200 -
+127.0.0.1 - - [16/Nov/2026 18:52:50] "POST /fines HTTP/1.1" 200 -
+ok
+test_invalid_fine_rejected (tests.test_web.WebTests.test_invalid_fine_rejected) ... 127.0.0.1 - - [16/Nov/2026 18:52:51] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [16/Nov/2026 18:52:51] "POST /fines HTTP/1.1" 422 -
+ok
+test_missing_csrf_token_rejected (tests.test_web.WebTests.test_missing_csrf_token_rejected) ... 127.0.0.1 - - [16/Nov/2026 18:52:51] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [16/Nov/2026 18:52:51] "POST /books HTTP/1.1" 403 -
+ok
+test_non_ascii_csrf_token_returns_403_and_server_remains_usable (tests.test_web.WebTests.test_non_ascii_csrf_token_returns_403_and_server_remains_usable) ... 127.0.0.1 - - [16/Nov/2026 18:52:52] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [16/Nov/2026 18:52:52] "POST /books HTTP/1.1" 403 -
+127.0.0.1 - - [16/Nov/2026 18:52:52] "GET / HTTP/1.1" 200 -
+ok
+test_static_routes_do_not_expose_source (tests.test_web.WebTests.test_static_routes_do_not_expose_source) ... 127.0.0.1 - - [16/Nov/2026 18:52:53] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [16/Nov/2026 18:52:53] "GET /../app.py HTTP/1.1" 404 -
+127.0.0.1 - - [16/Nov/2026 18:52:53] "GET /app.py HTTP/1.1" 404 -
+127.0.0.1 - - [16/Nov/2026 18:52:53] "GET /library.sqlite3 HTTP/1.1" 404 -
+127.0.0.1 - - [16/Nov/2026 18:52:53] "GET /.git/config HTTP/1.1" 404 -
+ok
+
+----------------------------------------------------------------------
+Ran 32 tests in 3.524s
+
+OK
