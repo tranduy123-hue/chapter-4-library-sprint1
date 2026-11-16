@@ -34,7 +34,7 @@ Ghi câu nhận xét của chính bạn sau khi đọc mã, kèm môi trường 
 
 ## Đính chính liên kết tác giả commit
 
-Cấu hình Git ban đầu của trợ lý dùng nhầm ID số trong email noreply của tài khoản tích hợp. Vì vậy một số commit cũ có thể được GitHub liên kết tới thasneem-810; tài khoản đó không được xác nhận là thành viên hoặc người đóng góp của bài này. Tác vụ tạo mã và commit được thực hiện bởi trợ lý qua tài khoản tích hợp duydat1412. ID đã được xác minh qua GitHub API là 116702145; cấu hình các commit mới đã được sửa và .mailmap ghi ánh xạ đúng cho các công cụ hỗ trợ nó. Không viết lại lịch sử đã công bố. Ánh xạ mailmap không đảm bảo mọi màn hình/API GitHub sẽ đổi liên kết tác giả cũ.
+Cấu hình Git ban đầu của trợ lý dùng nhầm ID số trong email noreply của tài khoản tích hợp. Vì vậy một số commit cũ có thể được GitHub liên kết tới thasneem-810; tài khoản đó không được xác nhận là thành viên hoặc người đóng góp của bài này. Tác vụ tạo mã và commit được thực hiện bởi trợ lý qua tài khoản tích hợp duydat1412. ID đã được xác minh qua GitHub API là 116702145; cấu hình các commit mới đã được sửa và .mailmap ghi ánh xạ đúng cho các công cụ hỗ trợ nó. Sau đó chủ repo đã yêu cầu sửa triệt để: lịch sử trên tất cả nhánh đã được viết lại để đính chính email sai, với bản sao lưu và force-with-lease. GitHub Contributors API đã loại tài khoản liên kết sai. Chi tiết và bảng SHA cũ/mới ở [attribution-repair.md](attribution-repair.md).
 
 PR bàn giao chứa bản sửa này và vẫn chờ review thật của nhóm. Không dùng liên kết tác giả sai hoặc review bot làm bằng chứng tham gia nhóm.
 
