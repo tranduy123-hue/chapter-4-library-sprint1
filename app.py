@@ -119,7 +119,7 @@ if __name__ == '__main__':
     parser.add_argument('--database', default='library.sqlite3')
     args = parser.parse_args()
     server = create_server(args.database, port=args.port)
-    print(f'Mở http://127.0.0.1:{server.server_port}', flush=True)
+    print(f'Open http://127.0.0.1:{server.server_port}', flush=True)
     try:
         server.serve_forever()
     except KeyboardInterrupt:
