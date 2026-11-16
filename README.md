@@ -84,7 +84,7 @@ Bổ sung: ISBN rỗng/sai/trùng, persistence, SQL injection, race condition, H
 
 Đã gửi invitation tới 3 thành viên; đối chiếu tài khoản qua email commit công khai. Không đăng email riêng vào repo.
 
-Mã/test hiện tại do trợ lý AI hỗ trợ tạo. Role A/B/C là phân công mô phỏng, **không chứng minh thành viên đã tự viết test**. Commit dùng tài khoản tích hợp duydat1412. Review từ owner ghi rõ AI-assisted; **không thay cho review độc lập của một trong ba thành viên**. Trước khi nộp đủ tiêu chí nhóm, thành viên cần accept invitation, tự đọc/chạy/đóng góp >=2 test cho phần mình và để lại review/comment thật trên PR. KAN-18 theo dõi phần này.
+Mã/test hiện tại do trợ lý AI hỗ trợ tạo. Role A/B/C là phân công mô phỏng, **không chứng minh thành viên đã tự viết test**. Theo yêu cầu chủ repo, các commit do trợ lý tạo được ghi dưới tài khoản tranduy123-hue; điều này không phải bằng chứng chủ repo tự viết toàn bộ mã. Review từ owner ghi rõ AI-assisted; **không thay cho review độc lập của một trong ba thành viên**. Trước khi nộp đủ tiêu chí nhóm, thành viên cần accept invitation, tự đọc/chạy/đóng góp >=2 test cho phần mình và để lại review/comment thật trên PR. KAN-18 theo dõi phần này.
 
 Lịch sử đã được sửa email tác giả theo yêu cầu chủ repo; xem [đính chính và hướng dẫn đồng bộ bản clone](docs/attribution-repair.md).
 

@@ -1,23 +1,19 @@
-# Đính chính tác giả commit
+# Tài khoản sử dụng cho bài tập
 
-Theo yêu cầu chủ repo, ngày 16/11/2026 đã sửa email noreply bị nhập sai trong 8 commit của tài khoản tích hợp duydat1412. Tài khoản thasneem-810 không phải thành viên được xác nhận và không phải tác giả thực hiện công việc trong phiên này.
+Theo yêu cầu chủ repo, các commit do trợ lý tạo đã được chuyển sang danh tính tranduy123-hue (GitHub ID 344689080). Đây là mã được AI hỗ trợ; tên tài khoản trong commit không thay thế bằng chứng đóng góp cá nhân của thành viên.
 
-Email đúng được xác minh bằng GitHub API user: 116702145+duydat1412@users.noreply.github.com. Chỉ sửa các header author/committer có email sai; giữ nguyên ngày, thông điệp, nội dung cây file và cấu trúc merge. Các commit hậu duệ đổi SHA theo parent mới. Chữ ký commit cũ không thể giữ hiệu lực sau rewrite nên đã loại bỏ; không giả chữ ký mới.
+Tài khoản tích hợp đăng nhập sẵn trên máy đã bị gỡ quyền collaborator. Từ lần sửa này, các thao tác ghi GitHub của trợ lý cho repo dùng token do chủ repo cung cấp, không dùng tài khoản tích hợp đó.
 
-Đã sao lưu toàn bộ refs trong bundle cục bộ trước thay đổi, kiểm tra git bundle verify thành công; backup không đẩy lên GitHub để tránh giữ lịch sử sai trong nhánh dự phòng. Bốn nhánh được đẩy đồng thời bằng --atomic và --force-with-lease theo SHA từng nhánh.
+Đã sao lưu lịch sử hiện tại trước khi viết lại; cập nhật cả năm nhánh bằng atomic push và lease theo SHA chính xác. Nội dung cây file, ngày, thông điệp và cấu trúc merge của tất cả 18 commit được giữ nguyên, chỉ sửa danh tính tích hợp trong 14 commit và các SHA parent phụ thuộc. Chữ ký cũ không thể còn hợp lệ sau rewrite nên đã loại bỏ.
 
-GitHub Contributors API sau sửa chỉ trả về duydat1412 và tranduy123-hue. Các URL commit/PR lịch sử có thể vẫn lưu snapshot SHA cũ; đó không phải lịch sử hiện hành trên các nhánh. Bảng ánh xạ đầy đủ: [commit-map.json](commit-map.json).
+Bảng ánh xạ đợt đầu giữ tại [commit-map.json](commit-map.json); đợt chuyển sang chủ repo tại [owner-commit-map.json](owner-commit-map.json). SHA conflict hiện hành: 22d050eb2f82c4d45ab20c984e81e5472b7382ba. SHA tích hợp ứng dụng: a715ac3d710a7767be2d9a73372a16a90460d37a.
 
-## Mốc bằng chứng mới
+## Giới hạn lịch sử Pull Request
 
-- Baseline: 58959f46d045999323276153b82fa441ce8b041f
-- Backend: 4c4389f7cd60c2305aef28f11d41d2b2a02bf4c0
-- Merge backend: aca5c6da221efed466c57875dd83880d5c36a217
-- Merge giải quyết conflict: 27832d6d4cff9031c39bb3dab5d166de9f12fccc
-- Tích hợp hoàn chỉnh trước đính chính tài liệu: 04c94881c52f4bc1a67f1331994f53e1f300e5bd
+GitHub không cho đổi người tạo PR đã tồn tại. Các PR cũ và activity lịch sử vẫn có thể hiện tài khoản tích hợp, dù contributor của lịch sử nhánh đã sửa. Không xóa repo hay làm mất bằng chứng PR đã merge. PR mới được tạo bằng tài khoản chủ repo.
 
-## Thành viên đã clone trước khi sửa
+## Đồng bộ máy thành viên
 
-Cách đơn giản: giữ thư mục cũ (đặc biệt nếu có thay đổi chưa đẩy), clone lại repo vào thư mục mới rồi chuyển phần đang làm sang nhánh mới. Không pull/merge lịch sử cũ vào main vì sẽ đưa email sai trở lại. Nếu có commit chưa đẩy cần giữ, nhờ trưởng nhóm hỗ trợ cherry-pick từng commit lên lịch sử mới; không xóa thư mục cũ trước khi bảo toàn phần việc đó.
+Giữ nguyên thư mục clone cũ nếu có phần việc chưa đẩy. Clone lại repo vào thư mục mới rồi chuyển phần việc cần giữ sang lịch sử mới. Không merge lịch sử cũ trở lại, vì sẽ khôi phục danh tính đã loại bỏ. Không xóa bản cũ trước khi bảo toàn thay đổi.
 
-Việc sửa này không thay thế review hay đóng góp test thật của thành viên; KAN-18 vẫn theo dõi riêng.
+Review và đóng góp test thật của thành viên vẫn theo dõi tại KAN-18.
