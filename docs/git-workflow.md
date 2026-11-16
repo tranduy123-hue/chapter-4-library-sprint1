@@ -1,9 +1,9 @@
 # Git workflow và giải quyết conflict
 
-1. Main baseline: 656b91b, README và .gitignore.
-2. Nhánh service: backend 5fb6eea, README 15f4491, CI 37e2ec6. PR #1 merge vào main: 06e768e.
-3. Nhánh UI từ baseline: fbf5062, sửa cùng dòng README theo nội dung form. PR #2.
-4. Review độc lập AI phát hiện token Unicode gây TypeError; sửa và thêm regression test: 9d1ee1a.
+1. Main baseline: 58959f4, README và .gitignore.
+2. Nhánh service: backend 4c4389f, README 4f32afb, CI 735153d. PR #1 merge vào main: aca5c6d.
+3. Nhánh UI từ baseline: 299dd22, sửa cùng dòng README theo nội dung form. PR #2.
+4. Review độc lập AI phát hiện token Unicode gây TypeError; sửa và thêm regression test: 223b9f9.
 5. Nhánh UI chạy git fetch origin rồi git merge origin/main. Git exit 1 là conflict thật cần xử lý:
 
 ~~~text
